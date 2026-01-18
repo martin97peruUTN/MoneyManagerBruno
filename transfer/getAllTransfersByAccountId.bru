@@ -1,0 +1,19 @@
+meta {
+  name: getAllTransfersByAccountId
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{local}}/api/transfers/account/48
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: createUser
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{local}}/user
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "username": "martin97peruOTRO",
+    "password": "test123",
+    "name": "Martin",
+    "lastname": "Perussini"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

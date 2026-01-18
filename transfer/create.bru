@@ -1,0 +1,29 @@
+meta {
+  name: create
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{local}}/api/transfer
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "originAccountId": 3, 
+    "destinyAccountId": 2, 
+    "amount": 4000, 
+    //"destinyAmount": 20,
+    "comment": "Pesos a dolares"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

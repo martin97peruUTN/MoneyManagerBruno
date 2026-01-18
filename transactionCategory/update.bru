@@ -1,0 +1,26 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{local}}/api/transactionCategory/30
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "Libros",
+    "isExpense": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

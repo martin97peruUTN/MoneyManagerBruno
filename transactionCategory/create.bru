@@ -1,0 +1,26 @@
+meta {
+  name: create
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{local}}/api/transactionCategory
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "name": "Clothes",
+      "isExpense": true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

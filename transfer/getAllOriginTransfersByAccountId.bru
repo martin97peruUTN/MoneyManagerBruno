@@ -1,0 +1,19 @@
+meta {
+  name: getAllOriginTransfersByAccountId
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{local}}/api/transfers/account/4/origin
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+}

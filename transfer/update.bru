@@ -1,0 +1,30 @@
+meta {
+  name: update
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{local}}/api/transfer/14
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "originAccountId": 4, 
+    "destinyAccountId": 9,
+    "amount": 5000,
+    "destinyAmount": 10,
+    "comment": "Crocantes a lechuga 🤑",
+    "date": "2023-07-28T15:00:34.966Z"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

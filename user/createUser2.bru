@@ -1,0 +1,29 @@
+meta {
+  name: createUser2
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{local}}/api/user2
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "username": "test2",
+    "password": "1234",
+    "name": "Test",
+    "lastname": "Testiculo",
+    "cualquiera": 57
+  }
+}
+
+settings {
+  encodeUrl: true
+}

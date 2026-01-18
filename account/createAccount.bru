@@ -1,0 +1,26 @@
+meta {
+  name: createAccount
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{local}}/api/account
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name":"Mercado Pago",
+    "currencyId": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+}

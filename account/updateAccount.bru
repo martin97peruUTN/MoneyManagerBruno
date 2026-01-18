@@ -1,0 +1,27 @@
+meta {
+  name: updateAccount
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{local}}/api/account/3
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    //"name":"account 3",
+    //"currencyId": 2,
+    "balance": 7850
+  }
+}
+
+settings {
+  encodeUrl: true
+}
