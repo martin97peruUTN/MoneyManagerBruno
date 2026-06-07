@@ -1,7 +1,7 @@
 meta {
-  name: sign up user
+  name: sign up
   type: http
-  seq: 3
+  seq: 4
 }
 
 post {
@@ -14,11 +14,12 @@ body:json {
   {
     "email": "{{userEmail}}",
     "password": "{{userPassword}}",
-    "name": "Martin",
-    "lastname": "Perussini"
+    "name": "Test",
+    "lastname": "User"
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

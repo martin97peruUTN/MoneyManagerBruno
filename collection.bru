@@ -3,5 +3,21 @@ meta {
 }
 
 auth {
-  mode: none
+  mode: cookie
+}
+
+headers {
+  Origin: {{frontendOrigin}}
+}
+
+docs {
+  Better Auth (cookie sessions). Workflow:
+  1. Run "sign up" or "sign in user/admin" — Bruno stores the session cookie automatically.
+  2. Call any /api/* request (auth: inherit) — cookie is sent on each request.
+  3. Run "sign out" to clear the session.
+
+  CSRF: requests that include the session cookie must send Origin (set in
+  {{frontendOrigin}}). Must match backend FRONTEND_ORIGIN / trustedOrigins.
+
+  User IDs are strings (Better Auth). Admin routes need role=admin in the DB.
 }

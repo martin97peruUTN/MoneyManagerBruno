@@ -1,0 +1,23 @@
+meta {
+  name: sign in admin
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{local}}/api/auth/sign-in/email
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "{{adminEmail}}",
+    "password": "{{adminPassword}}"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

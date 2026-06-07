@@ -7,23 +7,20 @@ meta {
 post {
   url: {{local}}/api/transfer
   body: json
-  auth: bearer
-}
-
-auth:bearer {
-  token: {{token}}
+  auth: inherit
 }
 
 body:json {
   {
-    "originAccountId": 3, 
+    "originAccountId": 1, 
     "destinyAccountId": 2, 
     "amount": 4000, 
     //"destinyAmount": 20,
-    "comment": "Pesos a dolares"
+    "comment": "Meli a Bru"
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

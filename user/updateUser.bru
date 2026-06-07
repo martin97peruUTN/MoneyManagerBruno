@@ -4,20 +4,16 @@ meta {
   seq: 5
 }
 
-patch {
-  url: {{local}}/api/user/3
+post {
+  url: {{local}}/api/auth/update-user
   body: json
-  auth: bearer
-}
-
-auth:bearer {
-  token: {{token}}
+  auth: inherit
 }
 
 body:json {
   {
-    "name": "Admin",
-    "lastname": "Istrador"
+    "name": "Martin",
+    "lastname": "Perussini"
   }
 }
 

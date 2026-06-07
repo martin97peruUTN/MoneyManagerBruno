@@ -4,14 +4,14 @@ meta {
   seq: 6
 }
 
-delete {
-  url: {{local}}/api/user/51
-  body: none
-  auth: bearer
+post {
+  url: {{local}}/api/auth/delete-user
+  body: json
+  auth: inherit
 }
 
-auth:bearer {
-  token: {{token}}
+body:json {
+  {}
 }
 
 settings {

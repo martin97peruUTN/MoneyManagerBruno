@@ -5,13 +5,9 @@ meta {
 }
 
 get {
-  url: {{local}}/api/admin/user/1
+  url: {{local}}/api/admin/user/{{userId}}
   body: none
-  auth: bearer
-}
-
-auth:bearer {
-  token: {{token}}
+  auth: inherit
 }
 
 settings {

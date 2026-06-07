@@ -1,15 +1,16 @@
 meta {
-  name: delete
+  name: getMe
   type: http
-  seq: 8
+  seq: 0
 }
 
-delete {
-  url: {{local}}/api/transfer/13
+get {
+  url: {{local}}/api/user/me
   body: none
   auth: inherit
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

@@ -7,13 +7,10 @@ meta {
 get {
   url: {{local}}/api/accounts
   body: none
-  auth: bearer
-}
-
-auth:bearer {
-  token: {{token}}
+  auth: inherit
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

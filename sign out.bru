@@ -1,0 +1,25 @@
+meta {
+  name: sign out
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{local}}/api/auth/sign-out
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {}
+}
+
+headers {
+  Origin: {{frontendOrigin}}
+  content-type: application/json
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
